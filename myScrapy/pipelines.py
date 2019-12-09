@@ -14,7 +14,7 @@ class MyscrapyPipeline(object):
 
     def process_item(self, item, spider):
         content = json.dumps(dict(item))
-        self.f.write(content)
+        self.f.write(content + '\n')
         print(content)
         return item
 
